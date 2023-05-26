@@ -39,3 +39,77 @@ function B_u(get_image){
     });
 }
 
+window.addEventListener("keydown", KD);
+
+function KD(e){
+  keyPressed = e.keyCode;
+  console.log(keyPressed);
+  if(e.shiftKey == true && keyPressed == "80"){
+    block_image_width = block_image_width + 10;
+    block_image_height = block_image_height + 10;
+    document.getElementById("current_width").innerHTML = block_image_width;
+    document.getElementById("current_height").innerHTML = block_image_height;
+  }
+
+  if(e.shiftKey == true && keyPressed == "77"){
+    block_image_width = block_image_width - 10;
+    block_image_height = block_image_height -  10;
+    document.getElementById("current_width").innerHTML = block_image_width;
+    document.getElementById("current_height").innerHTML = block_image_height;
+  }
+   
+  if(keyPressed == '37'){
+    left();  
+  }
+
+  if(keyPressed == '38'){
+    up();  
+  }
+
+  if(keyPressed == '39'){
+    right();  
+  }
+
+  if(keyPressed == '40'){
+    down();  
+  }
+
+  if(keyPressed == '87'){
+    B_u('wall.jpg');
+  }
+
+  if(keyPressed == '71'){
+    B_u('ground.png');
+  }
+
+  if(keyPressed == '76'){
+    B_u('light_green.png');
+  }
+
+  if(keyPressed == '84'){
+    B_u('trunk.jpg');
+  }
+
+  if(keyPressed == '82'){
+    B_u('roof.jpg');
+  }
+
+  if(keyPressed == '89'){
+    B_u('yellow_wall.png');
+  }
+  
+  if(keyPressed == '68'){
+    B_u('dark_green.png');
+  }
+
+  if(keyPressed == '85'){
+    B_u('unique.png');
+  }
+
+  if(keyPressed == '67'){
+    B_u('cloud.jpg');
+  }
+
+  
+  }
+
