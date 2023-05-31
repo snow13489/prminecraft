@@ -109,7 +109,45 @@ function KD(e){
   if(keyPressed == '67'){
     B_u('cloud.jpg');
   }
-
-  
   }
 
+function up (){
+   if(player_y >=0){
+     player_y = player_y - block_image_height;
+     console.log("block_image_height=" +block_image_height);
+     console.log("x=" + player_x + ", y=" + player_y);
+     canvas.remove(player_object);
+     P_U();
+   }
+}
+
+
+function down (){
+  if(player_y <=500){
+    player_y = player_y + block_image_height;
+    console.log("block_image_height=" +block_image_height);
+    console.log("x=" + player_x + ", y=" + player_y);
+    canvas.remove(player_object);
+    P_U();
+  }
+}
+
+function left (){
+  if(player_x >=0){
+    player_x = player_x - block_image_width;
+    console.log("block_image_width=" +block_image_width);
+    console.log("x=" + player_x + ", y=" + player_y);
+    canvas.remove(player_object);
+    P_U();
+  }
+}
+
+function right (){
+  if(player_x <=830){
+    player_x = player_x + block_image_width;
+    console.log("block_image_width=" +block_image_width);
+    console.log("x=" + player_x + ", y=" + player_y);
+    canvas.remove(player_object);
+    P_U();
+  }
+}
