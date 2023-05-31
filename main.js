@@ -34,7 +34,7 @@ function B_u(get_image){
         top:player_y,
         left:player_x
       });
-      canvas.add(player_object);
+      canvas.add(block_image_object);
 
     });
 }
